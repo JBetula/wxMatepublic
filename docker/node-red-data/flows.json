@@ -1,0 +1,821 @@
+[
+    {
+        "id": "8a0769b57d3609c7",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ecf6ddb2b585122b",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d525c622af655f74",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "192710a9f69b4c90",
+        "type": "ui_group",
+        "name": "wxMate",
+        "tab": "ecf6ddb2b585122b",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "99ab8dc5.f435c",
+        "type": "ui_tab",
+        "name": "HTTP",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e1a94bd40276475b",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "wxMate",
+        "port": "3306",
+        "db": "wxMate",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "a1449194d16f8bce",
+        "type": "ui_group",
+        "name": "Temp",
+        "tab": "ecf6ddb2b585122b",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4297d1020d4c4b89",
+        "type": "ui_group",
+        "name": "Lux",
+        "tab": "ecf6ddb2b585122b",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0326b081628786ce",
+        "type": "ui_group",
+        "name": "Pressure",
+        "tab": "ecf6ddb2b585122b",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4200426fcad1d420",
+        "type": "ui_group",
+        "name": "Humidity",
+        "tab": "ecf6ddb2b585122b",
+        "order": 7,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "599740b7.efde9",
+        "type": "http response",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 940,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "5d9ab0d2.66b92",
+        "type": "http in",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "url": "update-sensor",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "c5409761f1dfd4b7"
+            ]
+        ]
+    },
+    {
+        "id": "6530621.95b429c",
+        "type": "http in",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "url": "/getsensordata",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "9471d1a0.68588"
+            ]
+        ]
+    },
+    {
+        "id": "5ddc9f47.4b555",
+        "type": "http response",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 940,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "9471d1a0.68588",
+        "type": "function",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "func": "msg.topic = \"SELECT * FROM wx ORDER BY time DESC LIMIT 1;\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 120,
+        "wires": [
+            [
+                "2475e4f76f214de9"
+            ]
+        ]
+    },
+    {
+        "id": "13aea59.7430e5a",
+        "type": "debug",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "6d66c3b4a65af4c3",
+        "type": "mysql",
+        "z": "8a0769b57d3609c7",
+        "mydb": "e1a94bd40276475b",
+        "name": "wxMateDB",
+        "x": 550,
+        "y": 280,
+        "wires": [
+            [
+                "599740b7.efde9",
+                "b9f5e576ed5a09aa",
+                "fb9911eced2ada58"
+            ]
+        ]
+    },
+    {
+        "id": "c5409761f1dfd4b7",
+        "type": "function",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "func": "msg.topic = \"INSERT INTO wx (temperature, pressure, lux, humidity) VALUES(\"+msg.payload.temp+\",\"+msg.payload.pressure+\",\"+msg.payload.lux+\",\"+msg.payload.humidity+\");\"\n//msg.topic = \"INSERT INTO wx (temperature,pressure) VALUES(\"+msg.payload.temp+\",200);\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 280,
+        "wires": [
+            [
+                "6d66c3b4a65af4c3",
+                "07b09f271aa2368c"
+            ]
+        ]
+    },
+    {
+        "id": "6f3ac470b154274a",
+        "type": "mysql",
+        "z": "8a0769b57d3609c7",
+        "mydb": "e1a94bd40276475b",
+        "name": "wxMateDB¨",
+        "x": 550,
+        "y": 560,
+        "wires": [
+            [
+                "43e657bf08dd512f",
+                "3b5c3adfa608767f"
+            ]
+        ]
+    },
+    {
+        "id": "fb9911eced2ada58",
+        "type": "function",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "func": "msg.topic = \"SELECT * FROM wx ORDER BY time DESC LIMIT 1;\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 560,
+        "wires": [
+            [
+                "6f3ac470b154274a"
+            ]
+        ]
+    },
+    {
+        "id": "c706f4dc9d193f9e",
+        "type": "ui_text",
+        "z": "8a0769b57d3609c7",
+        "group": "192710a9f69b4c90",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "TIme updated:",
+        "format": "{{time}} {{date}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 960,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "57aa5fe51230073d",
+        "type": "ui_gauge",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "group": "a1449194d16f8bce",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "ºC",
+        "format": "{{temp}}",
+        "min": "-30",
+        "max": "50",
+        "colors": [
+            "#006eff",
+            "#00e658",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 950,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "73099e1dd5734dc7",
+        "type": "ui_gauge",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "group": "0326b081628786ce",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Pressure",
+        "label": "hPa",
+        "format": "{{pressure}}",
+        "min": "940",
+        "max": "1100",
+        "colors": [
+            "#b366ff",
+            "#8000ff",
+            "#440088"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 940,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "477faaae4027dea2",
+        "type": "ui_gauge",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "group": "4297d1020d4c4b89",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Lux",
+        "label": "units",
+        "format": "{{lux}}",
+        "min": 0,
+        "max": "10000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 930,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "07b09f271aa2368c",
+        "type": "debug",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "topic",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "b08a1743b2260f1e",
+        "type": "debug",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "b9f5e576ed5a09aa",
+        "type": "debug",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "2475e4f76f214de9",
+        "type": "mysql",
+        "z": "8a0769b57d3609c7",
+        "mydb": "e1a94bd40276475b",
+        "name": "wxMateDB¨",
+        "x": 550,
+        "y": 120,
+        "wires": [
+            [
+                "5ddc9f47.4b555",
+                "13aea59.7430e5a"
+            ]
+        ]
+    },
+    {
+        "id": "e99b2a24525410e6",
+        "type": "ui_chart",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "group": "0326b081628786ce",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 930,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bc666ea129c97e32",
+        "type": "ui_gauge",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "group": "4200426fcad1d420",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{humidity}}",
+        "min": "20",
+        "max": "90",
+        "colors": [
+            "#b366ff",
+            "#8000ff",
+            "#440088"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 940,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "43e657bf08dd512f",
+        "type": "debug",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "3b5c3adfa608767f",
+        "type": "function",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "func": "const data = msg.payload[0];\nmsg.time = data.time.toTimeString().split(' ')[0];\nmsg.date = data.time.toLocaleDateString('sv-SE');\nmsg.humidity = data.humidity;\nmsg.temp = data.temperature;\nmsg.lux = data.lux;\nmsg.pressure = data.pressure;\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 560,
+        "wires": [
+            [
+                "b08a1743b2260f1e",
+                "c706f4dc9d193f9e",
+                "57aa5fe51230073d",
+                "477faaae4027dea2",
+                "73099e1dd5734dc7",
+                "bc666ea129c97e32",
+                "71c80af9786af003",
+                "80556d64f966e15e",
+                "46a85e91521bd67a"
+            ]
+        ]
+    },
+    {
+        "id": "71c80af9786af003",
+        "type": "function",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "func": "const data = msg.payload[0];\nmsg.payload = data.pressure;\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 860,
+        "wires": [
+            [
+                "e99b2a24525410e6"
+            ]
+        ]
+    },
+    {
+        "id": "80556d64f966e15e",
+        "type": "function",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "func": "const data = msg.payload[0];\nmsg.payload = data.temperature;\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 920,
+        "wires": [
+            [
+                "bf6ca94f159fa063"
+            ]
+        ]
+    },
+    {
+        "id": "bf6ca94f159fa063",
+        "type": "ui_chart",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "group": "a1449194d16f8bce",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "2",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 930,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3172dcc9456c5f51",
+        "type": "function",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "func": "const data = msg.payload[0];\nmsg.payload = data.temperature;\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "46a85e91521bd67a",
+        "type": "function",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "func": "const data = msg.payload[0];\nmsg.payload = data.humidity;\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 800,
+        "wires": [
+            [
+                "e26b9945c56d1142"
+            ]
+        ]
+    },
+    {
+        "id": "e26b9945c56d1142",
+        "type": "ui_chart",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "group": "4200426fcad1d420",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 930,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5a36cc73a87ef23c",
+        "type": "inject",
+        "z": "8a0769b57d3609c7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    }
+]

@@ -1,0 +1,44 @@
+################################################################################
+# Node-RED Stack or Compose
+################################################################################
+# docker stack deploy node-red --compose-file docker-compose-node-red.yml
+# docker-compose -f docker-compose-node-red.yml -p myNoderedProject up
+################################################################################
+services:
+  node-red:
+    image: nodered/node-red:latest
+    container_name: node-red
+    restart: always
+    environment:
+      - TZ=Europe/Stockholm
+    ports:
+      - "80:1880"
+    networks:
+      - node-red-net
+      - reverseproxy-nw
+    volumes:
+      - ./node-red-data:/data
+  db:
+    container_name: wxMate 
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'wxMate'
+      # So you don't have to use root, but you can if you like
+      MYSQL_USER: 'bigboy'
+     # You can use whatever password you like
+      MYSQL_PASSWORD: 'qwerty123'
+      # Password for root access
+      MYSQL_ROOT_PASSWORD: 'qwerty123'
+    networks:
+      - node-red-net
+    volumes:
+      - ./db:/var/lib/mysql
+      - ./init:/docker-entrypoint-initdb.d
+volumes:
+  node-red-data:
+
+networks:
+  node-red-net:
+  reverseproxy-nw:
+    external: true

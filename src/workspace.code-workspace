@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../Arduino"
+		},
+		{
+			"name": "esp32",
+			"path": "../../esp32"
+		},
+		{
+			"name": "wxMate",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
